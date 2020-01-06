@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 gem "bundler", ">= 1.5.0"
 
-gem "rails", "5.2.4"
+gem "rails", "5.2.4.1"
 gem "rouge", "~> 3.14.0"
 gem "request_store", "~> 1.4.1"
 gem "mini_mime", "~> 1.0.1"
@@ -85,7 +85,7 @@ group :test do
   gem "capybara", (RUBY_VERSION < "2.4" ? "~> 3.15.1" : "~> 3.29.0")
   gem "selenium-webdriver"
   # RuboCop
-  gem 'rubocop', '~> 0.77.0'
+  gem 'rubocop', '~> 0.78.0'
   gem 'rubocop-performance', '~> 1.5.0'
   gem 'rubocop-rails', '~> 2.4.0'
 end
