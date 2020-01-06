@@ -1,4 +1,4 @@
-application_path = ENV['REDMINE_PATH'] || ENV['HOME'] + '/deploy'
+application_path = File.expand_path(File.basename(__FILE__) + "/..")
 
 directory application_path
 environment 'production'
