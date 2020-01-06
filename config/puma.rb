@@ -1,0 +1,10 @@
+application_path = ENV['REDMINE_PATH'] || ENV['HOME'] + '/deploy'
+
+directory application_path
+environment 'production'
+daemonize true
+pidfile "#{application_path}/tmp/pids/puma.pid"
+state_path "#{application_path}/tmp/pids/puma.state"
+stdout_redirect "#{application_path}/log/puma.stdout.log", "#{application_path}/log/puma.stderr.log"
+# bind "tcp://localhost:3000" # for testing
+bind "unix://#{application_path}/tmp/sockets/redmine.sock"
